@@ -67,13 +67,16 @@ vector<vector<int>> findBlocks(const vector<vector<int>> &board)
     return result;
 }
 
-int main() {
+int main()
+{
     int W, H;
     cin >> W >> H;
     vector<vector<int>> board(H, vector<int>(W));
 
-    for (int y = 0; y < H; ++y) {
-        for (int x = 0; x < W; ++x) {
+    for (int y = 0; y < H; ++y)
+    {
+        for (int x = 0; x < W; ++x)
+        {
             cin >> board[y][x];
         }
     }
@@ -81,8 +84,10 @@ int main() {
     vector<vector<int>> result = findBlocks(board);
 
     cout << "결과 게임판 :" << endl;
-    for (int y = 0; y < H; ++y) {
-        for (int x = 0; x < W; ++x) {
+    for (int y = 0; y < H; ++y)
+    {
+        for (int x = 0; x < W; ++x)
+        {
             cout << result[y][x] << " ";
         }
         cout << endl;
@@ -91,9 +96,12 @@ int main() {
     int totalBlocks = 0;
     int playerOneBlocks = 0;
     int playerTwoBlocks = 0;
-    for (const auto &row : result) {
-        for (int cell : row) {
-            if (cell != 0) {
+    for (const auto &row : result)
+    {
+        for (int cell : row)
+        {
+            if (cell != 0)
+            {
                 totalBlocks++;
                 if (cell == 1) playerOneBlocks++;
                 else if (cell == 2) playerTwoBlocks++;
