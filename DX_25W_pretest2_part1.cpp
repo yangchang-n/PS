@@ -3,8 +3,8 @@
 
 using namespace std;
 
-const int dx[] = {1, 0, 1, 1};
-const int dy[] = {0, 1, 1, -1};
+const int dx[] = {1, 0, 1, -1};
+const int dy[] = {0, 1, 1, 1};
 
 bool inBounds(int x, int y, int W, int H)
 {
