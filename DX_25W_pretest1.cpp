@@ -1,9 +1,6 @@
 #define MAX_N 1000
 #define MAX_M 20
 
-#include <stdio.h>
-#include <iostream>
-
 using namespace std;
 
 int wholeMap[MAX_N][MAX_N];
@@ -44,7 +41,7 @@ void init(int N, int M, int Map[MAX_N][MAX_N])
 
 Result findTreasureChest(int Pieces[MAX_M][MAX_M])
 {
-	  Result res;
+	Result res;
     res.y = res.x = 0;
     
     int check[2];
