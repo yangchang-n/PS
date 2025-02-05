@@ -44,7 +44,7 @@ int main(int argc, char** argv)
         int count = 0;
         for(int i = 1; i <= N; ++i)
         {
-            if(path_comp(parent, i) == i) count++;
+            if(parent[i] == i) count++;
         }
 
         cout << '#' << test_case << ' ' << count << '\n';
