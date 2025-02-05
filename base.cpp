@@ -9,7 +9,7 @@ int main(int argc, char** argv)
     cout.tie(NULL);
 
 	int T;
-	cin>>T;
+	cin >> T;
 
 	for(int test_case = 1; test_case <= T; ++test_case)
 	{
