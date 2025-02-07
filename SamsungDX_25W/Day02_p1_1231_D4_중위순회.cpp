@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 
 int sequence[100];
 int seq_cnt = 0;
