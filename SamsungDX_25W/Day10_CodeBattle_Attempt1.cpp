@@ -192,20 +192,20 @@ int area_bfs(int si, int sj, int sea_level)
 
 int total_area(int m, int m_struct[5], array<int, 3> cur_struct, int sea_level)
 {
-    if (cur_struct[0]) map_info[cur_struct[0]][cur_struct[1]] += m_struct[0];
-    else if (cur_struct[1])
+    if (cur_struct[2] == 0) map_info[cur_struct[0]][cur_struct[1]] += m_struct[0];
+    else if (cur_struct[2] == 1)
     {
         for (int i = 0; i < m; ++i) map_info[cur_struct[0]][cur_struct[1] + i] += m_struct[i];
     }
-    else if (cur_struct[2])
+    else if (cur_struct[2] == 2)
     {
         for (int i = 0; i < m; ++i) map_info[cur_struct[0]][cur_struct[1] + i] += m_struct[m - 1 - i];
     }
-    else if (cur_struct[3])
+    else if (cur_struct[2] == 3)
     {
         for (int i = 0; i < m; ++i) map_info[cur_struct[0] + i][cur_struct[1]] += m_struct[i];
     }
-    else if (cur_struct[4])
+    else if (cur_struct[2] == 4)
     {
         for (int i = 0; i < m; ++i) map_info[cur_struct[0] + i][cur_struct[1]] += m_struct[m - 1 - i];
     }
@@ -222,20 +222,20 @@ int total_area(int m, int m_struct[5], array<int, 3> cur_struct, int sea_level)
         }
     }
 
-    if (cur_struct[0]) map_info[cur_struct[0]][cur_struct[1]] -= m_struct[0];
-    else if (cur_struct[1])
+    if (cur_struct[2] == 0) map_info[cur_struct[0]][cur_struct[1]] -= m_struct[0];
+    else if (cur_struct[2] == 1)
     {
         for (int i = 0; i < m; ++i) map_info[cur_struct[0]][cur_struct[1] + i] -= m_struct[i];
     }
-    else if (cur_struct[2])
+    else if (cur_struct[2] == 2)
     {
         for (int i = 0; i < m; ++i) map_info[cur_struct[0]][cur_struct[1] + i] -= m_struct[m - 1 - i];
     }
-    else if (cur_struct[3])
+    else if (cur_struct[2] == 3)
     {
         for (int i = 0; i < m; ++i) map_info[cur_struct[0] + i][cur_struct[1]] -= m_struct[i];
     }
-    else if (cur_struct[4])
+    else if (cur_struct[2] == 4)
     {
         for (int i = 0; i < m; ++i) map_info[cur_struct[0] + i][cur_struct[1]] -= m_struct[m - 1 - i];
     }
