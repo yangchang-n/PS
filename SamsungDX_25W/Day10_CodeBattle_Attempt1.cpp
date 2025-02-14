@@ -162,19 +162,29 @@ int area_bfs(int si, int sj, int sea_level)
         q.pop();
         region++;
 
-        if (x == 0 || x == n - 1 || y == 0 || y == n - 1) is_closed = false;
+        if (x == 0 || x == n - 1 || y == 0 || y == n - 1)
+		{
+			is_closed = false;
+			break;
+		}
         
         for (int d = 0; d < 4; ++d)
         {
             int nx = x + dx[d], ny = y + dy[d];
             
-            if (nx < 0 || nx >= n || ny < 0 || ny >= n) is_closed = false;
+            if (nx < 0 || nx >= n || ny < 0 || ny >= n)
+			{
+				is_closed = false;
+				break;
+			}
             else if (!visited[nx][ny] && map_info[nx][ny] < sea_level)
             {
                 q.push({nx, ny});
                 visited[nx][ny] = true;
             }
         }
+
+		if (!is_closed) break;
     }
     
     return is_closed ? region : 0;
