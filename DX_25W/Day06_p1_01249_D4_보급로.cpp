@@ -34,6 +34,7 @@ int dijkstra(int n)
 		pq.pop();
 
 		if (cost > dist[cy][cx]) continue;
+		if (cy == N - 1 && cx == N - 1) break;
 
 		for (int i = 0; i < 4; ++i)
 		{
