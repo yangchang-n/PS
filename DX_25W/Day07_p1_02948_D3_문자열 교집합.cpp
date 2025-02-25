@@ -7,7 +7,7 @@ using namespace std;
 
 int T, N, M, cnt;
 unordered_set<string> us;
-char str[51];
+string str;
 
 int main(int argc, char** argv)
 {
