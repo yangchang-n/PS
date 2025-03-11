@@ -89,18 +89,10 @@ int main(int argc, char** argv)
 
 		if (a[0] == a[N - 1])
 		{
-			bool same = false;
 			cur = a[0];
+			bool same = true;
 
-			int cnt = 0;
-			if (a[0] > cur) big = true;
-			else if (a[0] < cur) big = false;
-			else
-			{
-				same = true;
-				cnt++;
-			}
-
+			int cnt = 1;
 			for (int i = 1; i < N; ++i)
 			{
 				if (N - i + cnt < ans) break;
