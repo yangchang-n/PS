@@ -1,4 +1,12 @@
-# Study-Cpp
+### Problem Solving
+
+[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=tomtomato)](https://solved.ac/tomtomato/)
+
+| Root     | Link  |
+| :---:    | :---: |
+| SWEA     | [SW Expert Academy](https://swexpertacademy.com/) |
+| acmicpc  | [Baekjoon Online Judge](https://www.acmicpc.net/) |
+| algospot | [Algospot](https://algospot.com/) |
 
 ### Course & References
 
