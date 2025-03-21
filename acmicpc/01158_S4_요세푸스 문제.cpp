@@ -17,30 +17,21 @@ int main()
 
 	cout << '<';
 
-	for (int i = 1; i < K; ++i) itr++;
-	cout << *itr;
-	itr = ppl.erase(itr);
-
-	while (!ppl.empty())
+	while (N)
 	{
 		for (int i = 1; i < K; ++i)
 		{
-			if (itr == ppl.end()) itr = ppl.begin();
 			itr++;
 			if (itr == ppl.end()) itr = ppl.begin();
 		}
 
-		cout << ", " << *itr;
+		N--;
+		if (!N) cout << *itr << '>';
+		else cout << *itr << ", ";
 
-		if (itr == ppl.end())
-		{
-			ppl.erase(itr);
-			itr = ppl.begin();
-		}
-		else itr = ppl.erase(itr);
+		itr = ppl.erase(itr);
+		if (itr == ppl.end()) itr = ppl.begin();
 	}
-
-	cout << '>';
 
 	return 0;
 }
