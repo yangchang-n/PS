@@ -2,7 +2,7 @@
 // #define _CRT_SECURE_NO_WARNINGS
 // freopen(" ", "r", stdin);
 using namespace std;
-// using ll = long long;
+using ll = long long;
 
 #include <iostream>
 
