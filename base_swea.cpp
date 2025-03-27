@@ -1,25 +1,14 @@
-//#ifndef _CRT_SECURE_NO_WARNINGS
-//#define _CRT_SECURE_NO_WARNINGS
-//#endif
+#define fastIO ios::sync_with_stdio(false); cin.tie(nullptr)
+// #define _CRT_SECURE_NO_WARNINGS
+// freopen(" ", "r", stdin);
+using namespace std;
+// using ll = long long;
 
 #include <iostream>
 
-using namespace std;
-
-int main(int argc, char** argv)
+int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
+	fastIO;
 
-	//freopen("input.txt", "r", stdin);
-
-	int T;
-	cin >> T;
-
-	for (int test_case = 1; test_case <= T; ++test_case)
-	{
-        
-	}
-    
 	return 0;
 }
