@@ -52,7 +52,7 @@ int main()
         auto cur = que.front();
         que.pop();
 
-        ans = max(ans, cur[0]);
+        ans = cur[0];
 
         for (int d = 0; d < 6; ++d)
         {
