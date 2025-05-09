@@ -5,7 +5,6 @@
 using namespace std;
 
 int dst[1'000'010];
-int vis[1'000'010];
 queue<array<int, 2>> que;
 
 int main()
@@ -18,8 +17,7 @@ int main()
 
 	for (int i = 0; i <= N; ++i)
 	{
-		dst[i] = 64;
-		vis[i] = 0;
+		dst[i] = -1;
 	}
 
 	int n;
@@ -29,7 +27,6 @@ int main()
 
 		que.push({ 0, n });
 		dst[n] = 0;
-		vis[n] = 1;
 	}
 
 	while (!que.empty())
@@ -44,15 +41,14 @@ int main()
 		{
 			int nn = (cn ^ msk);
 
-			if (nn > N || vis[nn])
+			if (nn > N || dst[nn] > 0)
 			{
 				msk <<= 1;
 				continue;
 			}
 
 			que.push({ nd, nn });
-			if (nd < dst[nn]) dst[nn] = nd;
-			vis[nn] = 1;
+			dst[nn] = nd;
 
 			msk <<= 1;
 		}
