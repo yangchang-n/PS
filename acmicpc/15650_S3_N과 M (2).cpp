@@ -4,7 +4,6 @@ using namespace std;
 
 int N, M;
 int arr[10];
-bool is_used[10];
 
 void bkt(int p)
 {
@@ -17,12 +16,10 @@ void bkt(int p)
 
 	for (int i = 1; i <= N; ++i)
 	{
-		if (is_used[i] || (p && arr[p - 1] > i)) continue;
+		if (p && arr[p - 1] >= i) continue;
 
 		arr[p] = i;
-		is_used[i] = true;
 		bkt(p + 1);
-		is_used[i] = false;
 	}
 }
 
