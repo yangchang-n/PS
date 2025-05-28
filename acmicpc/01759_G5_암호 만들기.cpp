@@ -9,7 +9,7 @@ int con, vow;
 char bet[16];
 char arr[16];
 
-static unordered_set<char> us = { 'a', 'e', 'i', 'o', 'u' };
+const unordered_set<char> us = { 'a', 'e', 'i', 'o', 'u' };
 
 void bkt(int p)
 {
