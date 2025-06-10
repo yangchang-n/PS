@@ -28,9 +28,9 @@ int main()
 			for (int i = 0; i < B; ++i)
 			{
 				cin >> tmp;
-				if (!us.count(tmp)) valid = false;
+				if (valid && !us.count(tmp)) valid = false;
 			}
-			
+
 			cout << (valid ? "=\n" : "?\n");
 		}
 		else if (A > B)
@@ -43,7 +43,7 @@ int main()
 			for (int i = 0; i < B; ++i)
 			{
 				cin >> tmp;
-				if (!us.count(tmp)) valid = false;
+				if (valid && !us.count(tmp)) valid = false;
 			}
 
 			cout << (valid ? ">\n" : "?\n");
@@ -63,7 +63,7 @@ int main()
 			}
 			for (int i = 0; i < A; ++i)
 			{
-				if (!us.count(can[i])) valid = false;
+				if (valid && !us.count(can[i])) valid = false;
 			}
 
 			cout << (valid ? "<\n" : "?\n");
