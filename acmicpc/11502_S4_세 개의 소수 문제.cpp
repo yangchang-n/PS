@@ -34,29 +34,26 @@ int main()
 
         for (int a : prime)
         {
+            if (possible) break;
             if (!a || a >= K) break;
 
             for (int b : prime)
             {
+                if (possible) break;
                 if (!b || b >= K) break;
 
                 for (int c : prime)
                 {
-                    if (!b || b >= K) break;
+                    if (possible) break;
+                    if (!c || c >= K) break;
 
                     if (a + b + c == K)
                     {
                         possible = true;
                         cout << a << ' ' << b << ' ' << c << '\n';
                     }
-
-                    if (possible) break;
                 }
-
-                if (possible) break;
             }
-
-            if (possible) break;
         }
 
         if (!possible) cout << "0\n";
