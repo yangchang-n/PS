@@ -11,17 +11,10 @@ struct cmp
 	bool operator() (const pis& a, const pis& b)
 	{
 		if (a.first != b.first) return a.first > b.first;
-
 		int asz = a.second.size();
 		int bsz = b.second.size();
 		if (asz != bsz) return asz > bsz;
-		else
-		{
-			for (int i = 0; i < asz; ++i)
-			{
-				if (a.second[i] != b.second[i]) return a.second[i] > b.second[i];
-			}
-		}
+		else return a.second > b.second;
 		return false;
 	}
 };
