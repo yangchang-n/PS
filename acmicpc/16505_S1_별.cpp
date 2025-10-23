@@ -13,9 +13,8 @@ int main()
 
 	for (int r = 0; r < sz; ++r)
 	{
-		for (int c = 0; c < sz; ++c)
+		for (int c = 0; c < sz - r; ++c)
 		{
-			if (c == sz - r) break;
 			if (r & c) cout << ' ';
 			else cout << '*';
 		}
