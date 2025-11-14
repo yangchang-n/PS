@@ -41,8 +41,8 @@ int main()
 			for (int b = 25; b >= 0; --b)
 			{
 				if (done) break;
+                if (b == a) break;
 				if (!cnt[b]) continue;
-				if (b == a) continue;
 				cnt[b]--;
 
 				bool possible = true;
@@ -76,9 +76,9 @@ int main()
 
 	if (od)
 	{
-		for (int k = 25; k >= 0; --k)
+		for (int k = 0; k < 26; ++k)
 		{
-			if (cnt[k] > 0) ans[pr] = char(k + 'a');
+			if (cnt[k]) ans[pr] = char(k + 'a');
 		}
 	}
 
